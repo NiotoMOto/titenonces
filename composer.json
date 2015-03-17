@@ -1,0 +1,14 @@
+{
+	"name": "aguillemoto/titenonces",
+	"authors": [{
+		"name": "Guillemoto",
+		"email": "antoine.guillemoto@gmail.com"
+	}],
+	"require": {
+		"slim/slim": "~2.6",
+		"monolog/monolog": "1.*",
+		"slim/slim": "2.*",
+		"slim/views": "0.*",
+		"twig/twig": "1.*"
+	}
+}
