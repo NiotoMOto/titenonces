@@ -9,6 +9,8 @@
 		"monolog/monolog": "1.*",
 		"slim/slim": "2.*",
 		"slim/views": "0.*",
-		"twig/twig": "1.*"
+		"twig/twig": "1.*",
+		"pimple/pimple": "~3.0",
+		"illuminate/database": "~5.0"
 	}
 }
