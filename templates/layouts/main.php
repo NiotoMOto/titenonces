@@ -3,12 +3,11 @@
 
 <head>
   {% block head %}
-  <title>Realestate Bootstrap Theme</title>
   <meta charset="UTF-8" />
   <link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="public/css/template.css" />
   <link rel="stylesheet" type="text/css" href="public/css/font-awesome.min.css">
-  <title>{% block title %}{% endblock %} - My Webpage</title>
+  <title>Titenonces {% block title %}{% endblock %}</title>
   {% endblock %}
 </head>
 

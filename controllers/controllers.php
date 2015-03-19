@@ -6,8 +6,8 @@ foreach (glob("controllers/classes/*.php") as $filename)
 {
     require $filename;
     $className = basename($filename, '.php') ;
-    var_dump($className);
-    $pimple[$className] = function ($pimple) use ($className){
-        return new $className($pimple);
-    };
+
+    $app->container->singleton($className, function ()use ($className, $app) {
+      return new $className($app);
+    });
 }

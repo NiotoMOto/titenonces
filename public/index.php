@@ -26,14 +26,14 @@ $app->get('/', function () use ($app) {
     // Sample log message
     $app->log->info("Slim-Skeleton '/' route");
     // Render index view
-    $app->render('index.html');
+    $app->render('index.php');
 });
 
 $app->get('/hello/:name', function ($name) use ($app) {
     // Sample log message
     $app->log->info("Slim-Skeleton '/hello' route");
     // Render index view
-    $app->render('index.html', array('name'=> $name));
+    $app->render('index.php', array('name'=> $name));
 });
 // Run app
 $app->run();

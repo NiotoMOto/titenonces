@@ -1,5 +1,5 @@
-{% extends "layouts/main.html" %}
-{% block title %}Index{% endblock %}
+{% extends "layouts/main.php" %}
+{% block title %}Home{% endblock %}
 {% block head %} {{ parent() }} {% endblock %}
 {% block breadcrumbs %}  <span class="pull-right">Home</span> {% endblock %}
 {% block pageTitle %}Home{% endblock %}

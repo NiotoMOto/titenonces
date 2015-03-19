@@ -1,27 +1,32 @@
 <?php
 class UserService
 {
-   protected $db;
+   protected $User;
    protected $app;
 
-   public function __construct(Pimple\Container $di) {
-      $this->db = $di['db'];
-      $this->app = $di['app'];
+   public function __construct($app) {
+      $this->app = $app ;
    }
 
    public function find($id) {
-      return $this->db->findUser($id);
    }
 
    public function all() {
-      return $this->db->allUsers();
+     $User = $app->User;
+     return $User::all();
    }
 
    public function register($user) {
-      return $this->db->register();
+    $newUser = new User($user);
+    $validate = $newUser->validate($user);
+    if($validate->pass){
+      return $newUser.save();
+    }else{
+      return $validate;
+    }
+
    }
 
    public function count() {
-      return $this->db->countUser();
    }
 }

@@ -1,10 +1,11 @@
-{% extends "layouts/main.html" %}
-{% block title %}Inscription{% endblock %}
+{% extends "layouts/main.php" %}
+{% block title %}Connexion{% endblock %}
 {% block head %} {{ parent() }} {% endblock %}
 {% block breadcrumbs %}  <span class="pull-right">Connexion </span> {% endblock %}
 {% block pageTitle %}Connexion{% endblock %}
 {% block content %}
 <div class="container">
+  {{message}}
   <div class="spacer">
     <div class="row ">
       <div class="col-lg-6 col-sm-6 col-sm-offset-3 col-md-offset-3 ">
