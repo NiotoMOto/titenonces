@@ -8,7 +8,4 @@ foreach (glob("services/classes/*.php") as $filename)
       return new $className($app);
     });
 
-    $pimple[$className] = function ($pimple) use (&$className){
-        return new $className($pimple);
-    };
 }

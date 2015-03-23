@@ -1,7 +1,6 @@
-{% macro input(name, value, type, errors) %}
+{% macro input(name, values, type, errors) %}
     <div class="form-group {% if errors[name]|length %}has-error{% endif %}">
       <label class="control-label" for="{{name}}">{{name}}</label>
-      <input type="text" name="{{name}}" class="form-control" placeholder="{{name}}" class="{% if errors[name].lenght > 0 %}has-error{% endif %}">
+      <input type="{{type}}" name="{{name}}" value="{{values[name]}}" class="form-control" placeholder="{{name}}" class="{% if errors[name].lenght > 0 %}has-error{% endif %}">
     </div>
-
 {% endmacro %}

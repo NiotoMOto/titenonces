@@ -9,21 +9,31 @@ class UserController extends Controller
    }
 
    public function register($request) {
-     $validate = $this->service->register($request->params());
+     $validate = $this->service->register($request->params())->validate;
      if($validate->pass){
-       $this->app->redirect($this->app->urlFor('login'),compact($validate->errors));
+       $this->app->redirect($this->app->urlFor('login'));
      }else{
-       $this->app->render('register.php',array("errors"=> $validate->errors));
-       var_dump($validate->errors);
+       $this->app->render('register.php',array("errors"=> $validate->errors, "user" => $request->params()));
      }
    }
 
-   public function login($user) {
+   public function login($request) {
+     $user = $request->params();
+     if(isset($user['password']) && isset($user['mail'])){
+       $result = $this->service->login($user);
+       if($result){
+         $this->app->redirect($this->app->urlFor('home'));
+       }else{
+         $this->app->redirect($this->app->urlFor('login'));
+       }
+     }else{
+      // $this->app->redirect($this->app->urlFor('login'));
+     }
    }
 
-   public function find($id) {
+   public function logout() {
+     session_unset();
+     $this->app->redirect($this->app->urlFor('home'));
    }
 
-   public function all() {
-   }
 }

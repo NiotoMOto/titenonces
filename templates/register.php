@@ -5,14 +5,14 @@
   <div class="spacer">
     <div class="row ">
       <div class="col-lg-6 col-sm-6 col-sm-offset-3 col-md-offset-3 ">
-
+{{dump(user)}}
         <form action="register" method="post">
-            {{ forms.input('pseudo','','text',errors) }}
-            {{ forms.input('password','','text',errors) }}
-            {{ forms.input('nom','','text',errors) }}
-            {{ forms.input('prenom','','text',errors) }}
-            {{ forms.input('mail','','text',errors) }}
-            {{ forms.input('tel','','text',errors) }}
+            {{ forms.input('pseudo',user,'text',errors) }}
+            {{ forms.input('password',user,'password',errors) }}
+            {{ forms.input('nom',user,'text',errors) }}
+            {{ forms.input('prenom',user,'text',errors) }}
+            {{ forms.input('mail',user,'text',errors) }}
+            {{ forms.input('tel',user,'text',errors) }}
             <div class="form-group">
               <button type="submit" class="btn btn-success" name="Submit">Inscription</button>
             </div>

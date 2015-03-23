@@ -10,7 +10,7 @@
     <div class="row ">
       <div class="col-lg-6 col-sm-6 col-sm-offset-3 col-md-offset-3 ">
         <form action="login" method="post">
-          <input type="text" name="pseudo" class="form-control" placeholder="Pseudo / mail">
+          <input type="text" name="mail" class="form-control" placeholder="Pseudo / mail">
           <input type="password" name="password" class="form-control" placeholder="Mot de passe">
           <button type="submit" class="btn btn-success" name="Submit">Connexion</button>
         </form>
