@@ -9,8 +9,8 @@ $capsule->addConnection(array(
     'driver'    => 'mysql',
     'host'      => 'localhost',
     'database'  => 'titenonces',
-    'username'  => 'root',
-    'password'  => '',
+    'username'  => 'titenonces',
+    'password'  => 'vivelesvieux',
     'charset'   => 'utf8',
     'collation' => 'utf8_unicode_ci',
     'prefix'    => ''
