@@ -24,10 +24,9 @@ class UserController extends Controller
        if($result){
          $this->app->redirect($this->app->urlFor('home'));
        }else{
+         $_SESSION['loginError'] = true;
          $this->app->redirect($this->app->urlFor('login'));
        }
-     }else{
-      // $this->app->redirect($this->app->urlFor('login'));
      }
    }
 

@@ -61,6 +61,7 @@ $app->get('/', function () use ($app) {
 })->name('home');
 
 $app->get('/login', function () use ($app) {
+  $_SESSION['loginError'] = false;
   $app->render('login.php');
 })->name('login');
 
