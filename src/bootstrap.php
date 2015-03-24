@@ -1,18 +1,10 @@
 <?php
-require 'vendor/autoload.php';
-require 'config/database.php';
 
 // Prepare app
 $app = new \Slim\Slim(array(
-    'templates.path' => 'templates/',
+    'templates.path' => TEMPLATEDIR,
 ));
 
-use Respect\Validation\Validator as v;
-$number = 123;
-v::numeric()->validate($number);
-require 'models/models.php';
-require 'controllers/controllers.php';
-require 'services/services.php';
 
 // Views
 $app->view(new \Slim\Views\Twig());
@@ -53,34 +45,3 @@ $app->container->singleton('log', function () {
     $log->pushHandler(new \Monolog\Handler\StreamHandler('logs/app.log', \Monolog\Logger::DEBUG));
     return $log;
 });
-
-
-// Routes
-$app->get('/', function () use ($app) {
-   $app->render('index.php');
-})->name('home');
-
-$app->get('/login', function () use ($app) {
-  $_SESSION['loginError'] = false;
-  $app->render('login.php');
-})->name('login');
-
-$app->post('/login', function() use($app){
-  $app->UserController->login($app->request());
-});
-
-$app->get('/register', function () use ($app) {
-  $app->render('register.php',compact($app));
-})->name('register');
-
-$app->post('/register',function() use($app){
-  $app->UserController->register($app->request());
-})->name('postRegister');
-
-
-$app->get('/logout',function() use ($app){
-  $app->UserController->logout();
-});
-
-// Run app
-$app->run();

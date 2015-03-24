@@ -14,5 +14,4 @@ class BaseModel extends Illuminate\Database\Eloquent\Model{
     $validate->pass =  $this->getValidator()->validate($data);
     return $validate;
   }
-
 }

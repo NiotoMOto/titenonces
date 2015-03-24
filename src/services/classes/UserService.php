@@ -34,7 +34,6 @@ class UserService
      if ($userResult) {
        var_dump(crypt($user['password'], $userResult->password) == $userResult->password);
        if(crypt($user['password'], $userResult->password) == $userResult->password){
-         var_dump('AUTEHNTIFAITE',$user);
          $_SESSION['user'] = $userResult;
          return true;
        }else{

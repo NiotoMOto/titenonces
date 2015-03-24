@@ -1,39 +1,22 @@
 <?php
-require 'vendor/autoload.php';
-// Prepare app
-$app = new \Slim\Slim(array(
-    'templates.path' => '../templates',
-));
-// Create monolog logger and store logger in container as singleton
-// (Singleton resources retrieve the same log resource definition each time)
-$app->container->singleton('log', function () {
-    $log = new \Monolog\Logger('slim-skeleton');
-    $log->pushHandler(new \Monolog\Handler\StreamHandler('logs/app.log', \Monolog\Logger::DEBUG));
-    return $log;
-});
-// Prepare view
-$app->view(new \Slim\Views\Twig());
-$app->view->parserOptions = array(
-    'charset' => 'utf-8',
-    'cache' => realpath('../templates/cache'),
-    'auto_reload' => true,
-    'strict_variables' => false,
-    'autoescape' => true
-);
-$app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
-// Define routes
-$app->get('/', function () use ($app) {
-    // Sample log message
-    $app->log->info("Slim-Skeleton '/' route");
-    // Render index view
-    $app->render('index.php');
-});
 
-$app->get('/hello/:name', function ($name) use ($app) {
-    // Sample log message
-    $app->log->info("Slim-Skeleton '/hello' route");
-    // Render index view
-    $app->render('index.php', array('name'=> $name));
-});
-// Run app
+define("DS", DIRECTORY_SEPARATOR);
+define("ROOT", realpath(dirname(__DIR__)) . DS);
+define("TEMPLATEDIR", ROOT . "templates" . DS);
+define("ROUTEDIR", ROOT . "src" . DS . "routes" . DS);
+
+
+require_once ROOT . 'vendor' . DS . 'autoload.php';
+
+require_once ROOT . 'config' . DS . 'database.php';
+require_once ROOT . 'src' . DS . 'bootstrap.php';
+
+require_once ROOT . 'src' . DS . 'models' . DS . 'models.php';
+require_once ROOT . 'src' . DS . 'services' . DS . 'services.php';
+require_once ROOT . 'src' . DS . 'controllers' . DS . 'controllers.php';
+
+foreach(glob(ROUTEDIR . '*.php') as $router) {
+    require_once $router;
+}
+
 $app->run();

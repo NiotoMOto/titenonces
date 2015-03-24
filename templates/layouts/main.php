@@ -4,9 +4,9 @@
 <head>
   {% block head %}
   <meta charset="UTF-8" />
-  <link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="public/css/template.css" />
-  <link rel="stylesheet" type="text/css" href="public/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/template.css" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <title>Titenonces {% block title %}{% endblock %}</title>
   {% endblock %}
 </head>
@@ -34,8 +34,9 @@
             <li><a href="contact">Contact</a>
             </li>
             {% if session.user %}
+
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{session.user.pseudo}} <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{session.user.mail}} {{session.user.pseudo}} <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="user/profil">Profil</a></li>
                 <li><a href="logout">Déconnexion</a></li>
@@ -58,7 +59,7 @@
 
   <div class="">
     <div class="">
-      <img height="" style="width: 100%;height: auto;" src="public/images/header-banner.png"/>
+      <img height="" style="width: 100%;height: auto;" src="images/header-banner.png"/>
     </div>
   </div>
 
@@ -105,16 +106,16 @@
           <div class="col-lg-3 col-sm-3">
             <h4>Follow us</h4>
             <a href="#">
-              <img src="public/images/facebook.png" alt="facebook">
+              <img src="images/facebook.png" alt="facebook">
             </a>
             <a href="#">
-              <img src="public/images/twitter.png" alt="twitter">
+              <img src="images/twitter.png" alt="twitter">
             </a>
             <a href="#">
-              <img src="public/images/linkedin.png" alt="linkedin">
+              <img src="images/linkedin.png" alt="linkedin">
             </a>
             <a href="#">
-              <img src="public/images/instagram.png" alt="instagram">
+              <img src="images/instagram.png" alt="instagram">
             </a>
           </div>
 
@@ -172,5 +173,5 @@
 
   <script src="https://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src="public/script/script.js" type="text/javascript"></script>
+  <script src="script/script.js" type="text/javascript"></script>
 </body>

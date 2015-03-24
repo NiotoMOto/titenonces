@@ -45,7 +45,7 @@
           <h4>Hot Properties</h4>
           <div class="row">
             <div class="col-lg-4 col-sm-5">
-              <img src="public/images/properties/1.jpg" class="img-responsive img-circle" alt="properties">
+              <img src="images/properties/1.jpg" class="img-responsive img-circle" alt="properties">
             </div>
             <div class="col-lg-8 col-sm-7">
               <h5><a href="property-detail.php">Integer sed porta quam</a></h5>
@@ -54,7 +54,7 @@
           </div>
           <div class="row">
             <div class="col-lg-4 col-sm-5">
-              <img src="public/images/properties/1.jpg" class="img-responsive img-circle" alt="properties">
+              <img src="images/properties/1.jpg" class="img-responsive img-circle" alt="properties">
             </div>
             <div class="col-lg-8 col-sm-7">
               <h5><a href="property-detail.php">Integer sed porta quam</a></h5>
@@ -63,7 +63,7 @@
           </div>
           <div class="row">
             <div class="col-lg-4 col-sm-5">
-              <img src="public/images/properties/1.jpg" class="img-responsive img-circle" alt="properties">
+              <img src="images/properties/1.jpg" class="img-responsive img-circle" alt="properties">
             </div>
             <div class="col-lg-8 col-sm-7">
               <h5><a href="property-detail.php">Integer sed porta quam</a></h5>
@@ -72,7 +72,7 @@
           </div>
           <div class="row">
             <div class="col-lg-4 col-sm-5">
-              <img src="public/images/properties/1.jpg" class="img-responsive img-circle" alt="properties">
+              <img src="images/properties/1.jpg" class="img-responsive img-circle" alt="properties">
             </div>
             <div class="col-lg-8 col-sm-7">
               <h5><a href="property-detail.php">Integer sed porta quam</a></h5>
@@ -85,7 +85,7 @@
         <div class="col-lg-4 col-sm-6">
           <div class="properties">
             <div class="image-holder">
-              <img src="public/images/services/ages.png" class="img-responsive" alt="properties">
+              <img src="images/services/ages.png" class="img-responsive" alt="properties">
               <div class="status sold">Sold</div>
             </div>
             <h4><a href="property-detail.php">Royal Inn</a></h4>
@@ -96,7 +96,7 @@
         <div class="col-lg-4 col-sm-6">
           <div class="properties">
             <div class="image-holder">
-              <img src="public/images/services/ages.png" class="img-responsive" alt="properties">
+              <img src="images/services/ages.png" class="img-responsive" alt="properties">
               <div class="status sold">Sold</div>
             </div>
             <h4><a href="property-detail.php">Royal Inn</a></h4>
@@ -107,7 +107,7 @@
         <div class="col-lg-4 col-sm-6">
           <div class="properties">
             <div class="image-holder">
-              <img src="public/images/services/ages.png" class="img-responsive" alt="properties">
+              <img src="images/services/ages.png" class="img-responsive" alt="properties">
               <div class="status sold">Sold</div>
             </div>
             <h4><a href="property-detail.php">Royal Inn</a></h4>
@@ -118,7 +118,7 @@
         <div class="col-lg-4 col-sm-6">
           <div class="properties">
             <div class="image-holder">
-              <img src="public/images/services/ages.png" class="img-responsive" alt="properties">
+              <img src="images/services/ages.png" class="img-responsive" alt="properties">
               <div class="status sold">Sold</div>
             </div>
             <h4><a href="property-detail.php">Royal Inn</a></h4>
@@ -129,7 +129,7 @@
         <div class="col-lg-4 col-sm-6">
           <div class="properties">
             <div class="image-holder">
-              <img src="public/images/services/ages.png" class="img-responsive" alt="properties">
+              <img src="images/services/ages.png" class="img-responsive" alt="properties">
               <div class="status sold">Sold</div>
             </div>
             <h4><a href="property-detail.php">Royal Inn</a></h4>
