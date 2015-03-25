@@ -24,9 +24,8 @@ $app->view->parserOptions = array(
 $app->view->parserExtensions = array(new \Slim\Views\TwigExtension(), new Twig_Extension_Debug());
 
 
+
 // Session
-session_start();
-$twig->addGlobal('session', $_SESSION);
 
 $authenticate = function ($app) {
     return function () use ($app) {

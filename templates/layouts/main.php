@@ -36,7 +36,7 @@
             {% if session.user %}
 
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{session.user.mail}} {{session.user.pseudo}} <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> {{session.user.pseudo}} <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="user/profil">Profil</a></li>
                 <li><a href="logout">Déconnexion</a></li>
