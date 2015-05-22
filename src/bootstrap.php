@@ -5,7 +5,6 @@ $app = new \Slim\Slim(array(
     'templates.path' => TEMPLATEDIR,
 ));
 
-
 // Views
 $app->view(new \Slim\Views\Twig());
 $app->view->parserExtensions = array(
@@ -23,10 +22,7 @@ $app->view->parserOptions = array(
 );
 $app->view->parserExtensions = array(new \Slim\Views\TwigExtension(), new Twig_Extension_Debug());
 
-
-
 // Session
-
 $authenticate = function ($app) {
     return function () use ($app) {
         if (!isset($_SESSION['user'])) {
@@ -36,7 +32,6 @@ $authenticate = function ($app) {
         }
     };
 };
-
 
 // Log
 $app->container->singleton('log', function () {

@@ -1,6 +1,6 @@
 <?php
 
-$app->get('/', function () use ($app) {
+$app->get('/home', function () use ($app) {
    $app->render('index.php');
 })->name('home');
 
